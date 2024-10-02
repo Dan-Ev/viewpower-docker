@@ -1,0 +1,13 @@
+version: '3.7'
+
+  viewpower:
+    image: viewpower:latest
+    ports:
+      - 15178:15178
+    volumes:
+      - ./viewpower_data/config:/opt/ViewPower/config
+      - ./viewpower_data/datas:/opt/ViewPower/datas
+      - ./viewpower_data/datalog:/opt/ViewPower/datalog
+      - ./viewpower_data/log:/opt/ViewPower/log
+    devices:
+      - /dev/bus/usb/001/006
