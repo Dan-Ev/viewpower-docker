@@ -1,7 +1,7 @@
 version: '3.7'
 
   viewpower:
-    image: viewpower:latest
+    image: michu137/viewpower-docker:x64
     ports:
       - 15178:15178
     volumes:
@@ -10,4 +10,5 @@ version: '3.7'
       - ./viewpower_data/datalog:/opt/ViewPower/datalog
       - ./viewpower_data/log:/opt/ViewPower/log
     devices:
+    # example
       - /dev/bus/usb/001/006
