@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim as builder
+FROM debian:bookworm-slim AS builder
 
 RUN apt update
 RUN apt install wget -y
@@ -9,7 +9,7 @@ RUN wget -c https://www.power-software-download.com/viewpower/ViewPower_linux_x6
 RUN tar -xvzf ViewPower_linux_x64_text.tar.gz
 RUN rm ViewPower_linux_x64_text.tar.gz
 
-FROM debian:bookworm-slim as runtime
+FROM debian:bookworm-slim AS runtime
 
 RUN mkdir /install
 WORKDIR /install
