@@ -1,5 +1,5 @@
 version: '3.7'
-
+services:
   viewpower:
     image: michu137/viewpower-docker:x64
     ports:
